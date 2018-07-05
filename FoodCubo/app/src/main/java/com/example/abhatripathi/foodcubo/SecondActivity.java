@@ -28,14 +28,15 @@ public class SecondActivity extends AppCompatActivity {
             public void run(){
                 try{
                     sleep(4000);
-                    Intent i=new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(i);
-                    SecondActivity.this.finish();
+                    
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
         };
         timer.start();
+        Intent i=new Intent(getApplicationContext(),MainActivity.class);
+                    startActivity(i);
+                    SecondActivity.this.finish();
     }
 }
